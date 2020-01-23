@@ -1,31 +1,27 @@
-# Laravel Telegram Log
+# Laravel API AMOCRM PUSHKA CLIENT
 
-- Send log to telegram chat.
-- Accept string, array, object, json;
+- Обёртка для api.amocrm.pushka.biz
 
 ### Install
-    composer require mttzzz/laravel-telegram-log
+    composer require mttzzz/api-amocrm-pushka-client
 
 ### Publish config
-    php artisan vendor:publish --provider mttzzz\laravelTelegramLog\TelegramLogServiceProvider
+    php artisan vendor:publish --provider mttzzz\ApiAmocrmPushkaClient\ApiAmoServiceProvider
     
-Edit app/config/telegramLog.php and fill your Telegram Bot token and chatId or add env variables.
+Edit app/config/api-amo-pushka.php and fill your Telegram Bot token and chatId or add env variables.
 ```php
 <?php
 
 return [
-// Telegram Bot Token
-    'token' => env('TELEGRAM_LOG_BOT_TOKEN', '111111:AAF99VnmhsE6HQtH6vsQaBRLctxXs4-UpdY'),
-
-// Telegram Chat Id
-    'chat_id' => env('TELEGRAM_LOG_CHAT_ID', '-1111111111111'),
-
+    'default' => 'apiPushkaKey',
+    'account' => 'apiPushkaKey',
 ];
 ```
 
 ### Usage
 ```php
-Telegram::log('test');
-Telegram::log(['test' => 'test']);
-Telegram::log({"test" : "test"});
+$data = ['with' => 'custom_fields'];  //form_params
+$responseType = 'object'; //->default('collection'); ['object', 'array', 'collection']
+$amo = new Amo();
+$accountData = $amo->account->get($data, $responseType); 
 ```
