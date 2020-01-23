@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "mttzzz\\api-amocrm-pushka-client\\":""
+            "mttzzz\\ApiAmocrmPushkaClient\\":""
         }
     },
     "minimum-stability": "dev",
