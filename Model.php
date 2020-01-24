@@ -4,7 +4,7 @@
 namespace mttzzz\ApiAmocrmPushkaClient;
 
 
-use App\Services\ApiAmoPushkaClient\traits\ApiAmoPushkaRequestTrait;
+use mttzzz\ApiAmocrmPushkaClient\traits\ApiAmoPushkaRequestTrait;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 
