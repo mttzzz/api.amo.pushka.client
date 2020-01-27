@@ -1,10 +1,8 @@
 <?php
 
-
 namespace mttzzz\ApiAmocrmPushkaClient;
 
-
-use mttzzz\ApiAmocrmPushkaClient\traits\ApiAmoPushkaRequestTrait;
+use mttzzz\ApiAmocrmPushkaClient\Traits\ApiAmoPushkaRequestTrait;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 
