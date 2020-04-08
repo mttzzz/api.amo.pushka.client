@@ -33,7 +33,7 @@ class Amo
         $guzzle = new Client();
         return $guzzle->post(self::BASE_URL . $v . '/get-pushka-key', [
             'form_params' => ['subdomain' => $account],
-            'headers' => ['Authorization' => 'Bearer 11235811']
+            'headers' => ['Authorization' => 'Bearer '.config('api-amo-pushka.token')]
         ])->getBody()->getContents();
     }
 }
