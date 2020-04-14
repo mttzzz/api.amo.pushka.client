@@ -2,9 +2,9 @@
 
 namespace mttzzz\ApiAmocrmPushkaClient;
 
-use mttzzz\ApiAmocrmPushkaClient\Traits\ApiAmoPushkaRequestTrait;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
+use mttzzz\ApiAmocrmPushkaClient\Traits\ApiAmoPushkaRequestTrait;
 
 class Model
 {
@@ -28,6 +28,9 @@ class Model
             case 'get':
             case 'list':
                 $this->setRequestData(['parameters' => Arr::first($data)], $method);
+                break;
+            case 'unlink_catalog_elements':
+                $this->setRequestData(Arr::first($data), $method);
                 break;
             default:
                 $this->setRequestData([$this->entity => Arr::first($data)], $method);
