@@ -30,7 +30,7 @@ class Model
                 $this->setRequestData(['parameters' => Arr::first($data)], $method);
                 break;
             case 'unlink_catalog_elements':
-                $this->setRequestData(Arr::first($data), $method);
+                $this->setRequestData(['request' => Arr::first($data)], $method);
                 break;
             default:
                 $this->setRequestData([$this->entity => Arr::first($data)], $method);
