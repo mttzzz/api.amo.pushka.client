@@ -1,8 +1,6 @@
 <?php
 
-
 namespace mttzzz\ApiAmocrmPushkaClient;
-
 
 use GuzzleHttp\Client;
 
