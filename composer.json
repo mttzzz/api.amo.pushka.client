@@ -2,7 +2,7 @@
     "name": "mttzzz/api-amocrm-pushka-client",
     "license": "MIT",
     "require": {
-        "guzzlehttp/guzzle": "^6.0"
+        
     },
     "authors": [
         {
